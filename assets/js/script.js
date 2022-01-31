@@ -1,3 +1,5 @@
+cons question = document.querySelector('#question');
+
 const QUESTION_BANK = [
     {
       id: '1',
@@ -75,15 +77,20 @@ function redirectToGame(e) {
 
   function initialiseQuiz() {
     let questions = QUESTION_BANK;
+    questionCounter = 0;
+    score = 0;
+    availableQuestions = [...questions]
+    getNewQuestion()
 
-    let html = `
-    <h2>${questions}</h2>
-    <p>1</p>
+   /* let html = `
+    <h2>${question}</h2>
+    <p>${options}</p>
     <p>2</p>
     <p>3</p>
     <p>4</p>
     `;
     return html;
+    */
 
     
     // Now randoimse it
@@ -91,6 +98,6 @@ function redirectToGame(e) {
 
     
   }
-  var quiz = initialiseQuiz();
+    var quiz = initialiseQuiz();
     document.getElementById("quiz-area").innerHTML = quiz; 
   
