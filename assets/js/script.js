@@ -57,27 +57,19 @@ const QUESTION_BANK = [
       ]
     }
   ]
-  
 
-/* Buttons for homepage */
-function buildButtons() {
-    let html = `
-    <button onclick="myFunction()">Play</button>
-    <button>How To Play</button>
-    `;
-    return html;
-}
 
-var buttons = buildButtons();
-document.getElementById("btns").innerHTML = buttons;
+/*
 
-/*Pop Up start game */
-function myFunction() {
-    let person = prompt("Please enter your name", "Enter name here");
-    if (person != null) {
-      initialiseQuiz();
+function redirectToGame(e) {
+    e.preventDefault();
+    const name = document.querySelector('#new-user-name').value;
+    if (name) {
+       window.location.href = `game.html?name=${name}`;
     }
-  }
+ }
+
+ */
 
   /* Initialise quiz and question bank */
 
@@ -92,8 +84,13 @@ function myFunction() {
     <p>4</p>
     `;
     return html;
+
+    
     // Now randoimse it
     // Pick first MAX_QUESTIONS from the list
+
+    
   }
   var quiz = initialiseQuiz();
-  document.getElementById("quiz-area").innerHTML = quiz;
+    document.getElementById("quiz-area").innerHTML = quiz; 
+  
