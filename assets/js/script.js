@@ -1,4 +1,4 @@
-cons question = document.querySelector('#question');
+const question = document.querySelector('#question');
 
 const QUESTION_BANK = [
     {
@@ -98,6 +98,13 @@ function redirectToGame(e) {
 
     
   }
-    var quiz = initialiseQuiz();
-    document.getElementById("quiz-area").innerHTML = quiz; 
+  
+  /* Opens popup window for How To Play */
+  function basicPopup(url) {
+    popupWindow = window.open(url,'popUpWindow','height=500,width=500,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');
+      }
+
+      
+
+
   
